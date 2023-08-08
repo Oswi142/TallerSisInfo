@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML y CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>HTML y CSS</h1>
+            <br>
+            <nav>
+                <ul>
+                    <li><button onclick="scrollToBlock(1)"><b>HTML</b></button></li>
+                    <li><button onclick="scrollToBlock(2)"><b>CSS</b></button></li>
+                    <li><button onclick="scrollToBlock(3)"><b>Complementación</b></button></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main-container">
+            <div id="block1" class="block">
+                <div class="container">
+                    <p>
+                        HTML, siglas de "HyperText Markup Language" (Lenguaje de Marcado de Hipertexto), es un lenguaje de marcado utilizado para crear y estructurar el contenido de páginas web. Fue desarrollado originalmente por Tim Berners-Lee en 1990 y ha evolucionado desde entonces. HTML proporciona un conjunto de etiquetas (tags) que se utilizan para describir cómo se debe mostrar el contenido en un navegador web.
+                        Las etiquetas de HTML son elementos que rodean el contenido y le dan significado. Cada etiqueta tiene una función específica y determina cómo se debe mostrar o interpretar el contenido. Por ejemplo, las etiquetas pueden definir títulos, párrafos, listas, enlaces, imágenes, formularios y otros elementos comunes en las páginas web.
+                        Un documento HTML se compone de una estructura jerárquica de elementos anidados. Por lo general, comienza con la etiqueta html que encierra todo el contenido de la página. Dentro del elemento html, encontramos la sección head que contiene información meta y enlaces a recursos externos, y la sección body que contiene el contenido visible de la página.
+                    </p>
+                    <div class="logos">
+                        <img class="imagen" src="html.webp" alt="HTML">
+                    </div>
+                </div>
+            </div>
+            <div id="block2" class="block">
+                <div class="container">
+                    <div class="logos">
+                        <img class="imagen" src="css.webp" alt="CSS">
+                    </div>
+                    <p>
+                        CSS, siglas de "Cascading Style Sheets" (Hojas de Estilo en Cascada), es un lenguaje de estilo utilizado para controlar el aspecto y la presentación de documentos HTML y XML. Fue creado para separar el contenido estructural de un documento web (HTML) de su diseño y presentación visual. De esta manera, CSS permite definir cómo se deben mostrar los elementos HTML en una página web, como colores, fuentes, márgenes, tamaños, alineaciones y muchos otros estilos visuales.
+                        La separación de los estilos de presentación del contenido tiene varias ventajas: <br>
+                        <b>Mantenimiento y reutilización:</b> Permite mantener un código más limpio y fácil de mantener, ya que los estilos se definen en una sola ubicación y pueden aplicarse a múltiples elementos en todo el sitio web. <br>
+                        <b>Consistencia:</b> CSS asegura que todos los elementos con una determinada clase o etiqueta se vean de la misma manera, proporcionando una apariencia coherente en todo el sitio. <br>
+                        <b>Flexibilidad:</b> Permite realizar cambios en la presentación del sitio sin alterar la estructura del contenido, lo que facilita la adaptación del diseño a diferentes dispositivos y tamaños de pantalla.
+                    </p>
+                        
+                </div>
+            </div>
+            <div id="block3" class="block">
+                <h2>¿Cómo se complementan?</h2>
+                <div class="content">
+                    <p>
+                        HTML y CSS se complementan de manera fundamental en el desarrollo web. Juntos, permiten crear páginas web bien estructuradas y visualmente atractivas. Veamos cómo se complementan: <br>
+                        <b>1. Separación de preocupaciones:</b> HTML se enfoca en la estructura y el contenido del documento, mientras que CSS se encarga de los estilos y la presentación visual. Esta separación de preocupaciones permite que cada tecnología cumpla su función de manera independiente, lo que facilita el mantenimiento y la escalabilidad del sitio web. <br>
+                        <b>2. Asociación de estilos con elementos HTML:</b> CSS se utiliza para seleccionar elementos HTML específicos y aplicar estilos a esos elementos. Esto se hace a través de selectores CSS que identifican qué elementos se deben estilizar. Por ejemplo, puedes seleccionar todos los párrafos (`p`) o todos los encabezados de nivel 1 (`h1`) y aplicar estilos a esos elementos. <br>
+                        <b>3. Estilos reutilizables:</b> CSS permite definir estilos que se pueden aplicar a varios elementos en todo el sitio web. Por ejemplo, puedes definir un estilo para los botones y reutilizarlo en todos los botones del sitio. Esto evita la necesidad de repetir estilos en cada elemento individual y facilita la consistencia visual. <br>
+                        <b>4. Control de diseño y presentación:</b> CSS brinda un gran control sobre la apariencia del contenido HTML. Puedes definir colores, fuentes, márgenes, tamaños, alineaciones y otros estilos visuales para mejorar la legibilidad y la experiencia del usuario en el sitio. <br>
+                        <b>5. Responsividad:</b> CSS también permite crear diseños responsivos, lo que significa que la apariencia del sitio web se ajustará automáticamente según el tamaño de la pantalla o el dispositivo utilizado para verlo. Esto es esencial para garantizar que el sitio se vea bien tanto en computadoras de escritorio como en dispositivos móviles. <br>
+                        <b>6. Fácil actualización:</b> Si deseas cambiar el aspecto visual del sitio web, solo necesitas modificar las reglas de estilo en el archivo CSS, sin necesidad de alterar el contenido HTML. Esto simplifica el proceso de actualización y mejora la eficiencia del desarrollo. <br>
+                        En resumen, HTML proporciona la estructura y el contenido de una página web, mientras que CSS se encarga de darle estilo y presentación visual. La combinación de ambas tecnologías permite crear sitios web atractivos, coherentes y bien organizados. Es importante entender cómo estas dos tecnologías trabajan en conjunto para desarrollar páginas web modernas y efectivas.
+                    </p>                
+                </div>
+            </div>
+            <div class="ejemplo">
+                <img src="ejemplo.jpg" alt="imagen">
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p id="copy">All rights reserved. The page belongs to the following people. Barrera Flores, Jorge Andrés. Mariaca Contreras, Bruno Benjamin. Rodriguez Padilla, Dennis Adrian. Roman Ledezma, Edwin Oswaldo. &copy; 2023</p>
+    </footer>
+
+    <script>
+        function scrollToBlock(blockNumber) {
+            const block = document.getElementById(`block${blockNumber}`);
+            const yOffset = -50;
+            const y = block.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+            window.scrollTo({ top: y, behavior: 'smooth' });
+            block.classList.add("grow-shrink");
+            setTimeout(() => block.classList.remove("grow-shrink"), 1000);
+        }
+    </script>
+</body>
+</html>

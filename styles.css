@@ -1,0 +1,146 @@
+/* Estilos globales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilos del wrapper */
+.wrapper {
+    flex: 1;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+h2{
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column; /* Cambio para mostrar los bloques uno debajo del otro */
+    align-items: center; /* Centrar los bloques horizontalmente */
+    overflow: hidden; /* Evita que el contenido se salga del contenedor */
+    margin: 20px; /* Aumento del margen del main */
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.block {
+    width: 100%; /* Cada bloque ocupa todo el ancho del contenedor */
+    margin-bottom: 20px;
+    padding: 30px;
+    padding-left: 150px;
+    padding-right: 150px;
+    box-sizing: border-box; /* Incluye el relleno en el ancho total del bloque */
+}
+
+.block:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.block:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos de la animación de crecimiento y decrecimiento */
+@keyframes grow-shrink {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.04);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.grow-shrink {
+    animation: grow-shrink 1s;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .block {
+        flex-basis: 100%;
+    }
+}
+
+.container {
+    display: flex; /* Usamos flexbox para colocar los elementos en línea */
+    align-items: center; /* Centramos verticalmente los elementos */
+}
+
+/* Estilo para la imagen */
+.imagen {
+    width: 200px; /* Ancho de la imagen (ajústalo según tus necesidades) */
+    margin-right: 50px; /* Espacio entre la imagen y el párrafo */
+    margin-left: 50px;
+}
+
+.ejemplo{
+    margin: 20px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+.ejemplo:hover {
+    transform: scale(1.1);
+}
+
+.logos{
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+.logos:hover {
+    transform: scale(1.2);
+}
